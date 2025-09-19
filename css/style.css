@@ -33,15 +33,15 @@ main{
   position: relative;
   width: 28%;
   padding: 1rem;
-  /* width: 300px;
-  height: 380px; */
   background-color: white;
   margin-bottom: 2rem;
+  box-shadow: 1px 2px 2px black;
 }
 
 .card img {
   margin-bottom: 1rem;
   width: 100%;
+  cursor: pointer;
 }
 
 .card p{
@@ -53,4 +53,47 @@ main{
   position: absolute;
   height: 30px;
   transform: translate(-13px, -23px);
+}
+
+p{
+  font-family: 'Sometype Mono', monospace;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlay-ds-none {
+  display: none;
+}
+
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.close-btn {
+  background: white;
+  border: none;
+  padding: 0.50rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  align-self: center; 
+}
+
+.overlay-image {
+  max-width: 50%;
+  max-height: 50%;
 }
